@@ -23,3 +23,11 @@ A cross-platform desktop application to open, preview, edit, and save `.parquet`
 ### Install Dependencies
 ```bash
 pip install pandas pyarrow pyqt5
+
+make dmg - mac os
+pip install pyinstaller
+pyinstaller --onefile --windowed --osx-bundle-identifier=com.example.parquetviewer main.py
+
+windows exe 
+pip install pyinstaller
+pyinstaller --onefile --windowed parquet_viewer.py
