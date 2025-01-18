@@ -25,8 +25,15 @@ A cross-platform desktop application to open, preview, edit, and save `.parquet`
 pip install pandas pyarrow pyqt5
 
 make dmg - mac os
+
+Install PyInstaller:
 pip install pyinstaller
+
+Create a macOS app bundle:
 pyinstaller --onefile --windowed --osx-bundle-identifier=com.example.parquetviewer main.py
+
+Create a .dmg file:
+hdiutil create -volname "Parquet Viewer" -srcfolder dist/parquet_viewer.app -ov -format UDZO dist/ParquetViewer.dmg
 
 windows exe 
 pip install pyinstaller
